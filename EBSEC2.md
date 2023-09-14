@@ -40,6 +40,47 @@ Attaching multiple volumes is useful when you require additional storage capacit
    ![Screenshot (127)](https://github.com/vivek2431/AWS-tasks/assets/137812531/8456cce0-7295-4e58-be1e-61d601eb0aba)
 
    ![Screenshot (128)](https://github.com/vivek2431/AWS-tasks/assets/137812531/f74abf9f-958d-47cc-8acf-532b4659f9fb)
+
+- Copy your ec2demo instance public ip.
+- open putty and paste your public ip in the Host Name(or IP address) section
+- Click on SSH, Go to Authentication and click the Credential
+- In the Credential browse your keypair and select it, Then click Open.
+- Then Select Accept option
+
+  ![Screenshot (130)](https://github.com/vivek2431/AWS-tasks/assets/137812531/a0688b3d-a06e-43d6-893c-80d0b6808299)
+
+  ![Screenshot (131)](https://github.com/vivek2431/AWS-tasks/assets/137812531/7bb83ba5-772c-4c21-a441-bb71477f1d0f)
+
+  ![Screenshot (132)](https://github.com/vivek2431/AWS-tasks/assets/137812531/2508c378-21f3-4c1f-a6cd-0880fc738a6e)
+
+  ![Screenshot (134)](https://github.com/vivek2431/AWS-tasks/assets/137812531/ca37ec38-1af2-4551-a730-bdc0cbf3885a)
+
+- Type: ec2-user, Run Enter
+- sudo su : For root User
+- lsblk: This command will list the disk you attached to your instance.
+
+  ![Screenshot (136)](https://github.com/vivek2431/AWS-tasks/assets/137812531/187cee3b-e2b8-4cee-ac28-15abcca58c7c)
+- sudo file -s /dev/xvdf: it means your volume is empty.
+  ![Screenshot (144)](https://github.com/vivek2431/AWS-tasks/assets/137812531/5bd12685-ded7-4ea4-9ce9-3b69baf57127)
+- sudo mkfs -t ext4 /dev/xvdf:  command is used to create a new ext4 file system on the specified block device
+  ![Screenshot (145)](https://github.com/vivek2431/AWS-tasks/assets/137812531/b6912b73-0a62-4654-bf10-824b1fc07ea0)
+- sudo mkdir /newvolume: To create a new directory
+   ![Screenshot (152)](https://github.com/vivek2431/AWS-tasks/assets/137812531/b6cc0621-77a1-44cc-b09b-3eda45fa5324)
+- sudo mount /dev/xvdf /newvolume/: To mount the volume
+- cd /newvolume df -h: This command show the free space in the newvolume directory.
+   ![Screenshot (151)](https://github.com/vivek2431/AWS-tasks/assets/137812531/2da029b8-0af3-4387-988c-faa04a0c7d05)
+
+
+    
+
+
+
+
+
+
+
+
+  
    
 
 
