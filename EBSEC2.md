@@ -69,6 +69,31 @@ Attaching multiple volumes is useful when you require additional storage capacit
 - sudo mount /dev/xvdf /newvolume/: To mount the volume
 - cd /newvolume df -h: This command show the free space in the newvolume directory.
    ![Screenshot (151)](https://github.com/vivek2431/AWS-tasks/assets/137812531/2da029b8-0af3-4387-988c-faa04a0c7d05)
+- Set Permissions: In permission root user only have full permission others with no permission.
+  Decide on the appropriate permissions for the directory. The 'chmod' command is used to change permissions. Common permissions include read (4), write (2), 
+  and execute (1). You can add these values to set permissions. For example, to give read and write permissions to the owner.
+  ![Screenshot (157)](https://github.com/vivek2431/AWS-tasks/assets/137812531/3938962e-c4b0-4f8e-a538-b43922f85401)
+  ![Screenshot (156)](https://github.com/vivek2431/AWS-tasks/assets/137812531/d49a8c07-c6a5-40db-8b9d-71d7815c09f2)
+- Set Ownership: In ownership ec2-user haveing ownership
+  Use the 'chown' command to set the ownership.
+  ![Screenshot (158)](https://github.com/vivek2431/AWS-tasks/assets/137812531/6cb7168b-e5d4-4aa5-9030-ac46e9387800)
+  ![Screenshot (159)](https://github.com/vivek2431/AWS-tasks/assets/137812531/a4f1cb6c-9a51-4a06-bf4e-3723b9077a5b)
+  ![Screenshot (160)](https://github.com/vivek2431/AWS-tasks/assets/137812531/0ea53920-d65e-4044-bdaa-01d8ec39d86f)
+
+# Importance of setting permissions and ownership for newly mounted volumes:
+- Security: Properly configured permissions ensure that only authorized users or processes can access the data on the mounted volume. Without the right permissions, sensitive data can be exposed to unauthorized users or malicious actors, leading to security breaches.
+- Data Integrity: Correct ownership and permissions help maintain data integrity. When files and directories have the appropriate ownership, it's easier to track changes and troubleshoot issues. Incorrect permissions can lead to data corruption or unintended modifications.
+- Isolation: By setting permissions and ownership, you can isolate different users or services from each other. This is crucial in multi-user or multi-application environments where you want to prevent one user or application from inadvertently interfering with or accessing another's data.
+- Compliance: Many industries and organizations have regulatory requirements that mandate proper access control and data protection. Failure to set permissions and ownership in compliance with these regulations can result in legal and financial consequences.
+- Auditability: Properly configured permissions allow for better auditability. You can track who has accessed or modified data by examining the ownership and permission settings. This is valuable for troubleshooting and security investigations.
+
+
+
+
+
+
+  
+  
 
 
     
